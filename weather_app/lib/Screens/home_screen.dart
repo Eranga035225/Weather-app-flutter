@@ -92,19 +92,29 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Card(
                     color: Colors.white,
                     child: Container(
-                    width: double.infinity,
-                    height: 60,
-                    decoration: BoxDecoration(
-                       
-                       borderRadius: BorderRadius.circular(20),
+                      padding: EdgeInsets.symmetric(horizontal: 20),
+                              width: double.infinity,
+                              height: 60,
+                              decoration: BoxDecoration(
+                                
+                                borderRadius: BorderRadius.circular(20),
+                              
                       
-                    ),
+                              ),
+                              child: Row(
+                                children: [
+                                  Text('Search Here.. ', style: GoogleFonts.poppins(fontSize: 16, color: Colors.grey.shade400),),
+                                ],
+                              )
+                    
+
+                    )
                    
                 
                   )
                   )
                 ),
-              )
+              
             ],
           ),
         )
