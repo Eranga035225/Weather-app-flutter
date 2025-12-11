@@ -14,7 +14,9 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Column(children: [
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
         SizedBox(
           height: 380,
           child: Stack(
@@ -73,7 +75,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       backgroundColor: Colors.black45,
                       child: Icon(Icons.menu, color: Colors.white,),
                     ),
-                    Text('MeteoNow', style: GoogleFonts.aBeeZee(fontSize: 23, color: Colors.white),),
+                    Text('MeteoNow', style: GoogleFonts.poppins(fontSize: 23, color: Colors.white),),
                     CircleAvatar(
                      
                       backgroundColor: Colors.black45,
@@ -104,7 +106,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Text('Search Here.. ', style: GoogleFonts.poppins(fontSize: 16, color: Colors.grey.shade400),),
+                                  Text('Search here.. ', style: GoogleFonts.poppins(fontSize: 16, color: Colors.grey.shade400),),
                                   Icon(Icons.search, color: Colors.grey.shade400,)
                                 ],
                               )
@@ -119,7 +121,17 @@ class _HomeScreenState extends State<HomeScreen> {
               
             ],
           ),
-        )
+        ),
+        SizedBox(height:20),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text('Hourly Weather Forecast', style: GoogleFonts.poppins(fontSize: 16, fontWeight: FontWeight.w700),),
+            ],
+          ),
+        ),
 
 
       ],)
