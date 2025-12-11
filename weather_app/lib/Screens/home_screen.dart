@@ -102,8 +102,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       
                               ),
                               child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text('Search Here.. ', style: GoogleFonts.poppins(fontSize: 16, color: Colors.grey.shade400),),
+                                  Icon(Icons.search, color: Colors.grey.shade400,)
                                 ],
                               )
                     
