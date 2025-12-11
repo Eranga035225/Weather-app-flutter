@@ -129,9 +129,35 @@ class _HomeScreenState extends State<HomeScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text('Hourly Weather Forecast', style: GoogleFonts.poppins(fontSize: 16, fontWeight: FontWeight.w700),),
+                 SizedBox(
+                    height: 136,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: 10,
+                      itemBuilder: (context, index){
+                        return Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: SizedBox(
+                            width: 100,
+                            height: 100,
+                            child: Card(
+                              color: Colors.white,
+                              child: Column(
+                                children: [
+                                  Text('05.00 AM', style: GoogleFonts.poppins(fontSize: 12, color: Colors.grey.shade900, fontWeight: FontWeight.bold),),
+                                ],
+
+                              )
+                              
+                            ),
+                          )
+                        );
+                      }),
+                  )
             ],
           ),
         ),
+     
 
 
       ],)
