@@ -29,13 +29,30 @@ class _HomeScreenState extends State<HomeScreen> {
                        ),
                     Align(
                       alignment: Alignment.centerLeft,
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-
-                        children: [
-                          Text('Kandy', style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 25, color: Colors.white),),
-
-                      ],)
+                      child: Padding(
+                        padding: const EdgeInsets.only(left:16.0),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                        
+                          children: [
+                            Text('Kandy', style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 25, color: Colors.white),),
+                            Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Text('Mist', style: GoogleFonts.poppins( fontSize: 16, color: Colors.grey.shade200),),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 8.0, right: 2),
+                                  child: Text('28\'C', style: TextStyle(fontSize: 16, color: Colors.grey.shade200,)
+                                ),),
+                                Image.network( "https://cdn.weatherapi.com/weather/64x64/night/248.png",
+                                height: 30,)
+                              ],
+                            
+                            )
+                        
+                        ],),
+                      )
                     )
                       
                 
@@ -72,15 +89,19 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: const EdgeInsets.symmetric(horizontal: 30.0),
                 child: Align(
                   alignment: AlignmentGeometry.bottomCenter,
-                  child: Container(
+                  child: Card(
+                    color: Colors.white,
+                    child: Container(
                     width: double.infinity,
                     height: 60,
                     decoration: BoxDecoration(
-                       color: Colors.grey.shade200,
-                       borderRadius: BorderRadius.circular(20)
+                       
+                       borderRadius: BorderRadius.circular(20),
+                      
                     ),
                    
                 
+                  )
                   )
                 ),
               )
