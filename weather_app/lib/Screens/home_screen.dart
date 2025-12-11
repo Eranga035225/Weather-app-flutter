@@ -143,8 +143,11 @@ class _HomeScreenState extends State<HomeScreen> {
                             child: Card(
                               color: Colors.white,
                               child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Text('05.00 AM', style: GoogleFonts.poppins(fontSize: 12, color: Colors.grey.shade900, fontWeight: FontWeight.bold),),
+                                  Text('05.00 AM', style: GoogleFonts.poppins(fontSize: 12, color: Colors.grey.shade700, fontWeight: FontWeight.bold),),
+                                  Icon(Icons.cloud_queue, color: Colors.grey.shade700,size:50, ),
+                                  Text('29 \'C', style: GoogleFonts.poppins(fontSize: 12, color: Colors.grey.shade700, fontWeight: FontWeight.bold),)
                                 ],
 
                               )
