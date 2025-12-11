@@ -22,9 +22,29 @@ class _HomeScreenState extends State<HomeScreen> {
               Container(
                 width: double.infinity,
                 height: 350,
-                child: ClipRect(child: Lottie.asset('assets/lotties/rainy.json', width: double.infinity, repeat: true, height: 350, fit: BoxFit.fill)),
+                child: Stack(
+                  children: [
+                    ClipRect(
+                       child: Lottie.asset('assets/lotties/rainy.json', width: double.infinity, repeat: true, height: 350, fit: BoxFit.fill)
+                       ),
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+
+                        children: [
+                          Text('Kandy', style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 25, color: Colors.white),),
+
+                      ],)
+                    )
+                      
                 
-              ),
+              
+                  ],
+                ),
+              
+              )
+              ,
               SafeArea(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 12.0),
