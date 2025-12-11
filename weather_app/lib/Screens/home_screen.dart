@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:lottie/lottie.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -21,10 +22,8 @@ class _HomeScreenState extends State<HomeScreen> {
               Container(
                 width: double.infinity,
                 height: 350,
-                decoration: BoxDecoration(
-                  color : Colors.grey,
-                 
-                ),  
+                child: ClipRect(child: Lottie.asset('assets/lotties/rainy.json', width: double.infinity, repeat: true, height: 350, fit: BoxFit.fill)),
+                
               ),
               SafeArea(
                 child: Padding(
@@ -33,13 +32,14 @@ class _HomeScreenState extends State<HomeScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                     CircleAvatar(
-                      child: Icon(Icons.menu, color: Colors.white,),
+                      
                       backgroundColor: Colors.black45,
+                      child: Icon(Icons.menu, color: Colors.white,),
                     ),
                     Text('MeteoNow', style: GoogleFonts.aBeeZee(fontSize: 23, color: Colors.white),),
                     CircleAvatar(
                      
-                      backgroundColor: Colors.white,
+                      backgroundColor: Colors.black45,
                       backgroundImage: NetworkImage('https://th.bing.com/th/id/R.6b0022312d41080436c52da571d5c697?rik=ejx13G9ZroRrcg&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fuser-png-icon-young-user-icon-2400.png&ehk=NNF6zZUBr0n5i%2fx0Bh3AMRDRDrzslPXB0ANabkkPyv0%3d&risl=&pid=ImgRaw&r=0'),
                     )
                     
