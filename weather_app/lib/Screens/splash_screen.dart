@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
+
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -12,8 +14,42 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Center(
-        child: Text('Weather App') 
+      bottomNavigationBar: SafeArea(
+        child: SizedBox(
+          height:50,
+          child: Align(
+            alignment: Alignment.bottomCenter,
+            child: Text('By InventX Solutions', style: TextStyle(fontSize: 10) )),
+        ),
+      ),
+      body: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          SizedBox(height: 10,),
+          Lottie.asset('assets/lotties/weather icon.json',repeat: true),
+          // SizedBox(height: 20,),
+          Text.rich(
+            TextSpan(
+              text: 'Meteo',
+              style: TextStyle(fontSize: 45,fontWeight: FontWeight.bold, color:Colors.grey.shade700),
+              children: [
+              TextSpan(
+                text: 'Now', 
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 45, color: Colors.amber)
+                ),
+              ]
+            )
+        
+
+          ),
+
+          Text('Accurate. Fast. Real-time Weather.',
+              style: TextStyle(
+                fontSize: 14,
+               
+            
+              ),),
+        ],
       )
 
 
