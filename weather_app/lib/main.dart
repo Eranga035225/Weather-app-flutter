@@ -15,7 +15,10 @@ class MyApp extends StatelessWidget {
       title: 'Weather App',
       debugShowCheckedModeBanner: false,
       
-      home:  SplashScreen()
+      home:  SplashScreen(
+
+        
+      )
 
     );
   }
