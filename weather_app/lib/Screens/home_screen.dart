@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
+import 'package:weather_app/services/weather_services.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -76,10 +77,15 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Icon(Icons.menu, color: Colors.white,),
                     ),
                     Text('MeteoNow', style: GoogleFonts.poppins(fontSize: 23, color: Colors.white),),
-                    CircleAvatar(
-                     
-                      backgroundColor: Colors.black45,
-                      backgroundImage: NetworkImage('https://th.bing.com/th/id/R.6b0022312d41080436c52da571d5c697?rik=ejx13G9ZroRrcg&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fuser-png-icon-young-user-icon-2400.png&ehk=NNF6zZUBr0n5i%2fx0Bh3AMRDRDrzslPXB0ANabkkPyv0%3d&risl=&pid=ImgRaw&r=0'),
+                    GestureDetector(
+                      onTap: () {
+                        WeatherServices().getCurrentWeather('Kandy');
+                      },
+                      child: CircleAvatar(
+                       
+                        backgroundColor: Colors.black45,
+                        backgroundImage: NetworkImage('https://th.bing.com/th/id/R.6b0022312d41080436c52da571d5c697?rik=ejx13G9ZroRrcg&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fuser-png-icon-young-user-icon-2400.png&ehk=NNF6zZUBr0n5i%2fx0Bh3AMRDRDrzslPXB0ANabkkPyv0%3d&risl=&pid=ImgRaw&r=0'),
+                      ),
                     )
                     
                   

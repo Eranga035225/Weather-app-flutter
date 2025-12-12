@@ -7,16 +7,9 @@ class WeatherServices {
 
     final response = await http.get(Uri.parse(endpoint));
 
-
-
-
-
+    print(response.body);
+    
 
   }
-
-
-
-
-
 
 }
