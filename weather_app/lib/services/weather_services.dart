@@ -7,8 +7,15 @@ class WeatherServices {
 
     final response = await http.get(Uri.parse(endpoint));
 
-    print(response.body);
+    if(response.statusCode == 200){
+      //success
+      
+    }else{
+      //error
+    }
+
     
+
 
   }
 
